@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Module>
-	<ModulePrefs description="I love adsense" height="60" title="Adsense"/>
+	<ModulePrefs 
+		title="gCodeAdSense" 
+		title_url="http://code.google.com/p/gcodeadsense"
+		description="AdSense Gadget for Your Google Code Project"
+		author="Frank Glaser"
+		author_email="glaserfrank@gmail.com"
+	/>
 	<Content type="html">
 		<![CDATA[
-			<!--gCodeAdSense V0.20-->
+			<!--gCodeAdSense V0.30-->
 			<!--AdSense keywords-->
 			<div style="display:none">Google Code Gadget Wiki</div>
 			<script type="text/javascript"><!--
