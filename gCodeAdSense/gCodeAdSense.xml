@@ -37,7 +37,7 @@
 						'google_ad_width  = ' + options.ad_width + ';\n' +
 						'google_ad_height = ' + options.ad_height + ';\n' +
 						'//-->';
-					var doc = document.documentElement.body;
+					var doc = this.document.body;
 					doc.appendChild(element);
 				}
 				
