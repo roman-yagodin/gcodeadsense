@@ -32,9 +32,9 @@
 				}
 				
 				/* Load Event */
-				var load = window.onload;
+				var loadWindow = window.onload;
 				window.onload = function() {
-					load();
+					loadWindow();
 					loadAdSense();
 				}
 				
