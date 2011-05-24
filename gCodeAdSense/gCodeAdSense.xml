@@ -40,6 +40,8 @@
 					var doc = document.documentElement.body;
 					doc.appendChild(element);
 				}
+				
+				loadAdSense();
 			</script>
 			<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 			</script>
