@@ -29,28 +29,34 @@
 				
 				<!--Add keywords-->
 				function addKeywords() {
-					var element = document.createElement("div");
-					var attribute = document.createAttribute("style");
-					attribute .nodeValue = "display:none";
-					element.setAttributeNode(attribute);
-					element.innerHTML = options.ad_keywords;
-					var doc = this.document.body;
-					doc.appendChild(element);
+					if (options.ad_keywords != "") {
+						var element = document.createElement("div");
+						var attribute = document.createAttribute("style");
+						attribute .nodeValue = "display:none";
+						element.setAttributeNode(attribute);
+						element.innerHTML = options.ad_keywords;
+						var doc = this.document.body;
+						doc.appendChild(element);
+					}
 				}
 				
 				/* Add AdSense */
 				function addAdSense() {
-					alert (options.ad_width);
-					alert (options.ad_height);
-					/*if (gadgets.window) {
+					if (gadgets.window) {
 						var viewport = gadgets.window.getViewportDimensions();
 						if (viewport.width) {
-							var width = viewport.width;
+							if (options.ad_width == "") {
+								options.ad_width = viewport.width;
+							}
 						}
 						if (viewport.height) {
-							var height = viewport.height;
+							if (options.ad_height == "") {
+								options.ad_height = viewport.height;
+							}
 						}
-					}*/
+					}
+					alert (options.ad_width);
+					alert (options.ad_height);
 					var element = document.createElement("script");
 					element.type = "text/javascript";
 					element.innerHTML = '<!--\n' +
