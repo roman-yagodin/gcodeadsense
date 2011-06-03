@@ -54,7 +54,7 @@
 					doc.appendChild(element);
 				}
 				
-				var onLoadgCodeAdSense() {
+				onLoadgCodeAdSense() {
 					addKeywords();
 					addAdSense();
 				}
