@@ -14,7 +14,7 @@
 	<UserPref name="ad_keywords"  datatype="string" default_value="" />
 	<Content type="html">
 		<![CDATA[
-			<!--gCodeAdSense V1.00-->
+			<!--gCodeAdSense V1.10-->
 			<script type="text/javascript">
 				
 				/* Get options */
