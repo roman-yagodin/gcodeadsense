@@ -46,9 +46,9 @@
 						options.ad_width = document.width;
 					}
 					if (options.ad_height == "0") {
-						options.ad_height = document.height;
+						options.ad_height = "100%";
 					}
-					alert (options.ad_width);
+					//alert (options.ad_width);
 					alert (options.ad_height);
 					var element = document.createElement("script");
 					element.type = "text/javascript";
