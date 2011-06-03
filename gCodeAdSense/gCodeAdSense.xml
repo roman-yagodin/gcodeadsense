@@ -9,8 +9,8 @@
 	</ModulePrefs>
 	<UserPref name="ad_client"    datatype="string" required="true" />
 	<UserPref name="ad_slot"      datatype="string" required="true" />
-	<UserPref name="ad_width"     datatype="string" default_value="" />
-	<UserPref name="ad_height"    datatype="string" default_value="" />
+	<UserPref name="ad_width"     datatype="string" default_value="0" />
+	<UserPref name="ad_height"    datatype="string" default_value="0" />
 	<UserPref name="ad_keywords"  datatype="string" default_value="" />
 	<Content type="html">
 		<![CDATA[
@@ -44,12 +44,15 @@
 				function addAdSense() {
 					var element = document.createElement("script");
 					element.type = "text/javascript";
-					element.innerHTML = '<!--\n' +
-						'google_ad_client = "ca-pub-' + options.ad_client + '";\n' +
-						'google_ad_slot   = "' + options.ad_slot + '";\n' +
-						'google_ad_width  = ' + options.ad_width + ';\n' +
-						'google_ad_height = ' + options.ad_height + ';\n' +
-						'//-->';
+					var innerHTML =	'<!--\n' +
+													'google_ad_client = "ca-pub-' + options.ad_client + '";\n' +
+													'google_ad_slot   = "' + options.ad_slot + '";\n';
+					if ( (options.ad_width > 0) and (options.ad_height > 0) ) {
+						innerHTML +=	'google_ad_width  = ' + options.ad_width + ';\n' +
+													'google_ad_height = ' + options.ad_height + ';\n';
+					}
+					innerHTML +=		'//-->';
+					element.innerHTML = innerHTML;
 					var doc = this.document.body;
 					doc.appendChild(element);
 				}
