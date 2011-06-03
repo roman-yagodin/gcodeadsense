@@ -46,17 +46,17 @@
 						var viewport = gadgets.window.getViewportDimensions();
 						if (viewport.width) {
 							if (options.ad_width == "0") {
-								options.ad_width = viewport.width;
+								options.ad_width = viewport.width.toString();
 							}
 						}
 						if (viewport.height) {
 							if (options.ad_height == "0") {
-								options.ad_height = viewport.height;
+								options.ad_height = viewport.height.toString();
 							}
 						}
 					}
 					alert (options.ad_width);
-					alert (options.ad_height);
+					alert (viewport.height);
 					var element = document.createElement("script");
 					element.type = "text/javascript";
 					element.innerHTML = '<!--\n' +
