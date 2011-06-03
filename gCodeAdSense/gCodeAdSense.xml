@@ -7,6 +7,8 @@
 		author="Frank Glaser"
 		author_email="glaserfrank@gmail.com">
 	</ModulePrefs>
+	<UserPref name="width"        datatype="string" required="true" />
+	<UserPref name="height"       datatype="string" required="true" />
 	<UserPref name="ad_client"    datatype="string" required="true" />
 	<UserPref name="ad_slot"      datatype="string" required="true" />
 	<UserPref name="ad_width"     datatype="string" default_value="0"/>
