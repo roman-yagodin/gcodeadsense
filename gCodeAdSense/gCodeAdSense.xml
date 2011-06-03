@@ -43,10 +43,10 @@
 				/* Add AdSense */
 				function addAdSense() {
 					if (options.ad_width == "0") {
-						options.ad_width = window.get;
+						options.ad_width = document.width;
 					}
 					if (options.ad_height == "0") {
-						options.ad_height = prefs.getString("height");
+						options.ad_height = document.height;
 					}
 					alert (options.ad_width);
 					alert (options.ad_height);
