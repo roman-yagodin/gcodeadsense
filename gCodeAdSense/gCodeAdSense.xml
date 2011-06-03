@@ -9,8 +9,8 @@
 	</ModulePrefs>
 	<UserPref name="ad_client"    datatype="string" required="true" />
 	<UserPref name="ad_slot"      datatype="string" required="true" />
-	<UserPref name="ad_width"     datatype="string" required="true" />
-	<UserPref name="ad_height"    datatype="string" required="true" />
+	<UserPref name="ad_width"     datatype="string" />
+	<UserPref name="ad_height"    datatype="string" />
 	<UserPref name="ad_keywords"  datatype="string" default_value="" />
 	<Content type="html">
 		<![CDATA[
@@ -40,6 +40,17 @@
 				
 				/* Add AdSense */
 				function addAdSense() {
+					alert (options.ad_width);
+					alert (options.ad_height);
+					/*if (gadgets.window) {
+						var viewport = gadgets.window.getViewportDimensions();
+						if (viewport.width) {
+							var width = viewport.width;
+						}
+						if (viewport.height) {
+							var height = viewport.height;
+						}
+					}*/
 					var element = document.createElement("script");
 					element.type = "text/javascript";
 					element.innerHTML = '<!--\n' +
