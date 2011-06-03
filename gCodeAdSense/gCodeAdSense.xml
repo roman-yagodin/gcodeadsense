@@ -9,8 +9,8 @@
 	</ModulePrefs>
 	<UserPref name="ad_client"    datatype="string" required="true" />
 	<UserPref name="ad_slot"      datatype="string" required="true" />
-	<UserPref name="ad_width"     datatype="string" />
-	<UserPref name="ad_height"    datatype="string" />
+	<UserPref name="ad_width"     datatype="string" default_value="0"/>
+	<UserPref name="ad_height"    datatype="string" default_value="0"/>
 	<UserPref name="ad_keywords"  datatype="string" default_value="" />
 	<Content type="html">
 		<![CDATA[
@@ -45,12 +45,12 @@
 					if (gadgets.window) {
 						var viewport = gadgets.window.getViewportDimensions();
 						if (viewport.width) {
-							if (options.ad_width == null) {
+							if (options.ad_width == "0") {
 								options.ad_width = viewport.width;
 							}
 						}
 						if (viewport.height) {
-							if (options.ad_height == null) {
+							if (options.ad_height == "0") {
 								options.ad_height = viewport.height;
 							}
 						}
