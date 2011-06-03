@@ -47,7 +47,7 @@
 					var innerHTML =	'<!--\n' +
 													'google_ad_client = "ca-pub-' + options.ad_client + '";\n' +
 													'google_ad_slot   = "' + options.ad_slot + '";\n';
-					if ( (options.ad_width > 0) and (options.ad_height > 0) ) {
+					if ( (options.ad_width > 0) && (options.ad_height > 0) ) {
 						innerHTML +=	'google_ad_width  = ' + options.ad_width + ';\n' +
 													'google_ad_height = ' + options.ad_height + ';\n';
 					}
