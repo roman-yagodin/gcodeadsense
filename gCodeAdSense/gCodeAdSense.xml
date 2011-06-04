@@ -12,7 +12,7 @@
 	<UserPref name="ad_width"     datatype="string" default_value="0" />
 	<UserPref name="ad_height"    datatype="string" default_value="0" />
 	<UserPref name="ad_keywords"  datatype="string" default_value="" />
-	<Content type="html" view="home">
+	<Content type="html" view="default">
 		<![CDATA[
 			<!--gCodeAdSense V1.10-->
 			<script type="text/javascript">
@@ -83,5 +83,5 @@
 			</script>
 		]]>
 	</Content>
-	<Content type="url" view="AdSense" href="http://code.google.com/p/gcodeadsense/" />
+	<Content type="url" view="Context" href="http://code.google.com/p/gcodeadsense/" />
 </Module>
