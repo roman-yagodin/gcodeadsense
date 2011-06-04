@@ -6,14 +6,13 @@
 		description="AdSense Gadget for Your Google Code Project"
 		author="Frank Glaser"
 		author_email="glaserfrank@gmail.com">
-		<Require feature="views" />
 	</ModulePrefs>
 	<UserPref name="ad_client"    datatype="string" required="true" />
 	<UserPref name="ad_slot"      datatype="string" required="true" />
 	<UserPref name="ad_width"     datatype="string" default_value="0" />
 	<UserPref name="ad_height"    datatype="string" default_value="0" />
 	<UserPref name="ad_keywords"  datatype="string" default_value="" />
-	<Content type="html" view="adsense">
+	<Content type="html">
 		<![CDATA[
 			<!--gCodeAdSense V1.10-->
 			<script type="text/javascript">
@@ -63,15 +62,6 @@
 					doc.appendChild(element);
 				}
 				
-				function navigateTo(dest) {
-					var supported_views = gadgets.views.getSupportedViews();
-					gadgets.views.requestNavigateTo(supported_views[dest]);
-				};
-				
-				//function gotoContext() {
-				//	navigateTo("Context");
-				//};
-				
 				addKeywords();
 				addAdSense();
 				
@@ -91,7 +81,7 @@
 				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 				})();
 			</script>
+			<iframe src="http://code.google.com/p/gcodeadsense/" height="100" width="200">You need a Frames Capable browser to view this content.</iframe> 
 		]]>
 	</Content>
-	<Content type="url" view="default" href="http://code.google.com/p/gcodeadsense/" />
 </Module>
