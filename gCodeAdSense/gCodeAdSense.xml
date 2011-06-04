@@ -15,7 +15,7 @@
 	<UserPref name="ad_project"   datatype="string" default_value="" />
 	<Content type="html">
 		<![CDATA[
-			<!--gCodeAdSense V1.10-->
+			<!--gCodeAdSense V1.20-->
 			<script type="text/javascript">
 				
 				/* Get options */
@@ -32,30 +32,28 @@
 				<!--Add keywords-->
 				function addKeywords() {
 					if (options.ad_keywords != "") {
-						var element = document.createElement("div");
-						var attribute = document.createAttribute("style");
-						attribute.nodeValue = "display:none";
-						element.setAttributeNode(attribute);
-						element.innerHTML = options.ad_keywords;
+						var eldiv = document.createElement("div");
+						var attstyle = document.createAttribute("style");
+						attstyle.nodeValue = "display:none";
+						eldiv.setAttributeNode(attstyle);
+						eldiv.innerHTML = options.ad_keywords;
 						var doc = this.document.body;
-						doc.appendChild(element);
+						doc.appendChild(eldiv);
 					}
 				}
 				
 				<!--Add IFrame-->
 				function addIFrame() {
 					if (options.ad_project != "") {
-						var element = document.createElement("iframe");
-						var attribute = document.createAttribute("src");
-						//"http://code.google.com/p/"
-						attribute.nodeValue = options.ad_project;
-						element.setAttributeNode(attribute);
-					//	var attribute = document.createAttribute("style");
-					//	attribute.nodeValue = "display:none";
-					//	element.setAttributeNode(attribute);
-						//element.innerHTML = options.ad_keywords;
+						var elifr = document.createElement("iframe");
+						var attsrc = document.createAttribute("src");
+						attsrc.nodeValue = options.ad_project;
+						elifr.setAttributeNode(attsrc);
+						var attstyle = document.createAttribute("style");
+						attstyle.nodeValue = "display:none";
+						elifr.setAttributeNode(attstyle);
 						var doc = this.document.body;
-						doc.appendChild(element);
+						doc.appendChild(elifr);
 					}
 				}
 				
