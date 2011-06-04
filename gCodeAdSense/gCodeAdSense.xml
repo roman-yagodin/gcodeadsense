@@ -12,6 +12,7 @@
 	<UserPref name="ad_width"     datatype="string" default_value="0" />
 	<UserPref name="ad_height"    datatype="string" default_value="0" />
 	<UserPref name="ad_keywords"  datatype="string" default_value="" />
+	<UserPref name="ad_project"   datatype="string" default_value="" />
 	<Content type="html">
 		<![CDATA[
 			<!--gCodeAdSense V1.10-->
@@ -25,6 +26,7 @@
 					ad_width:     prefs.getString("ad_width"),
 					ad_height:    prefs.getString("ad_height"),
 					ad_keywords:  prefs.getString("ad_keywords"),
+					ad_project:   prefs.getString("ad_project"),
 				};
 				
 				<!--Add keywords-->
@@ -42,10 +44,11 @@
 				
 				<!--Add IFrame-->
 				function addIFrame() {
-					//if (options.ad_keywords != "") {
+					if (options.ad_project != "") {
 						var element = document.createElement("iframe");
 						var attribute = document.createAttribute("src");
-						attribute.nodeValue = "http://code.google.com/p/gcodeadsense/";
+						//"http://code.google.com/p/"
+						attribute.nodeValue = options.ad_project;
 						element.setAttributeNode(attribute);
 					//	var attribute = document.createAttribute("style");
 					//	attribute.nodeValue = "display:none";
@@ -53,7 +56,7 @@
 						//element.innerHTML = options.ad_keywords;
 						var doc = this.document.body;
 						doc.appendChild(element);
-					//}
+					}
 				}
 				
 				/* Add AdSense */
