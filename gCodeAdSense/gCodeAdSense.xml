@@ -6,6 +6,7 @@
 		description="AdSense Gadget for Your Google Code Project"
 		author="Frank Glaser"
 		author_email="glaserfrank@gmail.com">
+		<Require feature="views" />
 	</ModulePrefs>
 	<UserPref name="ad_client"    datatype="string" required="true" />
 	<UserPref name="ad_slot"      datatype="string" required="true" />
@@ -61,6 +62,15 @@
 					var doc = this.document.body;
 					doc.appendChild(element);
 				}
+				
+				function navigateTo(dest) {
+					var supported_views = gadgets.views.getSupportedViews();
+					gadgets.views.requestNavigateTo(supported_views[dest]);
+				};
+				
+				//function gotoContext() {
+					navigateTo("Context");
+				//};
 				
 				addKeywords();
 				addAdSense();
