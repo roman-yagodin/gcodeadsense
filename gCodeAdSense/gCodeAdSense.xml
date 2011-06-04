@@ -32,12 +32,28 @@
 					if (options.ad_keywords != "") {
 						var element = document.createElement("div");
 						var attribute = document.createAttribute("style");
-						attribute .nodeValue = "display:none";
+						attribute.nodeValue = "display:none";
 						element.setAttributeNode(attribute);
 						element.innerHTML = options.ad_keywords;
 						var doc = this.document.body;
 						doc.appendChild(element);
 					}
+				}
+				
+				<!--Add IFrame-->
+				function addIFrame() {
+					//if (options.ad_keywords != "") {
+						var element = document.createElement("iframe");
+						var attribute = document.createAttribute("src");
+						attribute.nodeValue = "http://code.google.com/p/gcodeadsense/";
+						element.setAttributeNode(attribute);
+					//	var attribute = document.createAttribute("style");
+					//	attribute.nodeValue = "display:none";
+					//	element.setAttributeNode(attribute);
+						//element.innerHTML = options.ad_keywords;
+						var doc = this.document.body;
+						doc.appendChild(element);
+					//}
 				}
 				
 				/* Add AdSense */
@@ -63,6 +79,7 @@
 				}
 				
 				addKeywords();
+				addIFream()
 				addAdSense();
 				
 			</script>
@@ -81,7 +98,6 @@
 				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 				})();
 			</script>
-			<iframe src="http://code.google.com/p/gcodeadsense/" height="100" width="200">You need a Frames Capable browser to view this content.</iframe> 
 		]]>
 	</Content>
 </Module>
