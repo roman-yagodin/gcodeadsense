@@ -12,7 +12,7 @@
 	<UserPref name="ad_width"     datatype="string" default_value="0" />
 	<UserPref name="ad_height"    datatype="string" default_value="0" />
 	<UserPref name="ad_keywords"  datatype="string" default_value="" />
-	<Content type="html">
+	<Content type="html-inline">
 		<![CDATA[
 			<!--gCodeAdSense V1.10-->
 			<script type="text/javascript">
