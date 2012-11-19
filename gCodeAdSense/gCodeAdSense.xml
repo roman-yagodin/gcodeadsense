@@ -78,12 +78,11 @@
 					var doc = this.document.body;
 					doc.appendChild(element);
           
-          element.innerHTML =  '';
-          var attsrc = document.createAttribute("src");
-					 attsrc.nodeValue = 'http://pagead2.googlesyndication.com/pagead/show_ads.js';
-					element.setAttributeNode(attsrc);
-           
-          doc.appendChild(element);
+					var elementsrc.innerHTML =  '';
+					var attsrc = document.createAttribute("src");
+					attsrc.nodeValue = 'http://pagead2.googlesyndication.com/pagead/show_ads.js';
+					elementsrc.setAttributeNode(attsrc);
+          doc.appendChild(elementsrc);
 				}
 				
 				addKeywords();
