@@ -78,7 +78,8 @@
 					var doc = this.document.body;
 					doc.appendChild(element);
           
-					var elementsrc.innerHTML =  '';
+					var elementsrc= document.createElement("script");
+					elementsrc.type = "text/javascript";
 					var attsrc = document.createAttribute("src");
 					attsrc.nodeValue = 'http://pagead2.googlesyndication.com/pagead/show_ads.js';
 					elementsrc.setAttributeNode(attsrc);
