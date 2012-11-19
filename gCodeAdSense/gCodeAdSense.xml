@@ -79,7 +79,10 @@
 					doc.appendChild(element);
           
           element.innerHTML =  '';
-          element.src = 'http://pagead2.googlesyndication.com/pagead/show_ads.js';
+          var attsrc = document.createAttribute("src");
+					 attsrc.nodeValue = 'http://pagead2.googlesyndication.com/pagead/show_ads.js';
+					element.setAttributeNode(attsrc);
+           
           doc.appendChild(element);
 				}
 				
