@@ -69,7 +69,7 @@
 					
 					var element = document.createElement("script");
 					element.type = "text/javascript";
-					element.innerHTML =	'<!--\n' +
+					element.innerHTML =  '<!--\n' +
 															'google_ad_client = "ca-pub-' + options.ad_client + '";\n' +
 															'google_ad_slot   = "' + options.ad_slot + '";\n' +
 															'google_ad_width  = ' + options.ad_width + ';\n' +
@@ -77,6 +77,10 @@
 															'//-->';
 					var doc = this.document.body;
 					doc.appendChild(element);
+          
+          element.innerHTML =  '';
+          element.src = 'http://pagead2.googlesyndication.com/pagead/show_ads.js';
+          doc.appendChild(element);
 				}
 				
 				addKeywords();
@@ -84,7 +88,7 @@
 				addAdSense();
 				
 			</script>
-			<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+			<!--script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"-->
 			</script>
 			
 			<!--Google Analytics-->
