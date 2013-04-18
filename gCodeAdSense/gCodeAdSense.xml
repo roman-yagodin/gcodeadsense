@@ -82,7 +82,7 @@
           var elementsrc= document.createElement("script");
 					elementsrc.type = "text/javascript";
 					var attsrc = document.createAttribute("src");
-					attsrc.nodeValue = 'http://pagead2.googlesyndication.com/pagead/show_ads.js';
+					attsrc.nodeValue = 'https://pagead2.googlesyndication.com/pagead/show_ads.js';
 					elementsrc.setAttributeNode(attsrc);
           doc.appendChild(elementsrc);
           */
@@ -93,8 +93,8 @@
 				addAdSense();
 				
 			</script>
-			<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-			<script type="text/javascript" src="http://www.google.com/jsapi"></script> 
+			<script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+			<script type="text/javascript" src="https://www.google.com/jsapi"></script> 
 			</script>
 			
 			<!--Google Analytics-->
