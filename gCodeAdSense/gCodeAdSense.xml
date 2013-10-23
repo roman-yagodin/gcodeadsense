@@ -15,7 +15,7 @@
 	<UserPref name="ad_project"   datatype="string" default_value="" />
 	<Content type="html">
 		<![CDATA[
-			<!--gCodeAdSense V1.40-->
+			<!--gCodeAdSense V1.50-->
 			<script type="text/javascript">
 				
 				/* Get options */
@@ -67,25 +67,26 @@
 						options.ad_height = this.document.body.clientHeight;
 					}
 					
-					var element = document.createElement("script");
-					element.type = "text/javascript";
-					element.innerHTML =  '<!--\n' +
-															'google_ad_client = "ca-pub-' + options.ad_client + '";\n' +
-															'google_ad_slot   = "' + options.ad_slot + '";\n' +
-															'google_ad_width  = ' + options.ad_width + ';\n' +
-															'google_ad_height = ' + options.ad_height + ';\n' +
-															'//-->';
+					var element = document.createElement("ins");
+					
+          var att = document.createAttribute("class");
+					att.nodeValue = "adsbygoogle";
+					element .setAttributeNode(att);
+          
+          var att = document.createAttribute("data-ad-client");
+					att.nodeValue = 'ca-pub-' + options.ad_client;
+					element .setAttributeNode(att);
+          
+          var att = document.createAttribute("data-ad-slot");
+					att.nodeValue = options.ad_slot;
+					element .setAttributeNode(att);
+          
+          var att = document.createAttribute("style");
+					att.nodeValue = "display:inline-block;width:"+options.ad_width+"px;height:"+ options.ad_height+"px";
+					element .setAttributeNode(att);
+														  
 					var doc = this.document.body;
 					doc.appendChild(element);
-          
-					/*
-          var elementsrc= document.createElement("script");
-					elementsrc.type = "text/javascript";
-					var attsrc = document.createAttribute("src");
-					attsrc.nodeValue = 'https://pagead2.googlesyndication.com/pagead/show_ads.js';
-					elementsrc.setAttributeNode(attsrc);
-          doc.appendChild(elementsrc);
-          */
 				}
 				
 				addKeywords();
@@ -93,7 +94,7 @@
 				addAdSense();
 				
 			</script>
-			<script type="text/javascript" src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+			<script async type="text/javascript" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
 			<script type="text/javascript" src="https://www.google.com/jsapi"></script> 
 			</script>
 		]]>
