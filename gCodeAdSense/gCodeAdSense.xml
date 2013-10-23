@@ -15,7 +15,12 @@
 	<UserPref name="ad_project"   datatype="string" default_value="" />
 	<Content type="html">
 		<![CDATA[
-			<!--gCodeAdSense V1.50-->
+			
+      <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+      
+      <script async type="text/javascript" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      
+      <!--gCodeAdSense V1.50-->
 			<script type="text/javascript">
 				
 				/* Get options */
@@ -94,9 +99,9 @@
 				addAdSense();
 				
 			</script>
-			<script async type="text/javascript" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js">
-			<script type="text/javascript" src="https://www.google.com/jsapi"></script> 
-			</script>
+			
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+			
 		]]>
 	</Content>
 </Module>
