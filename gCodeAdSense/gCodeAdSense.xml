@@ -9,8 +9,8 @@
 	</ModulePrefs>
 	<UserPref name="ad_client"    datatype="string" required="true" />
 	<UserPref name="ad_slot"      datatype="string" required="true" />
-	<UserPref name="ad_width"     datatype="string" default_value="0" />
-	<UserPref name="ad_height"    datatype="string" default_value="0" />
+	<UserPref name="ad_width"     datatype="string" default_value="auto" />
+	<UserPref name="ad_height"    datatype="string" default_value="auto" />
 	<UserPref name="ad_keywords"  datatype="string" default_value="" />
 	<UserPref name="ad_project"   datatype="string" default_value="" />
 	<Content type="html">
@@ -64,6 +64,7 @@
 				
 				/* Add AdSense */
 				function addAdSense() {
+				/*
 					if (options.ad_width <= 0) {
 						options.ad_width = this.document.body.clientWidth;
 					}
@@ -71,7 +72,7 @@
 					if (options.ad_height <= 0) {
 						options.ad_height = this.document.body.clientHeight;
 					}
-					
+				*/	
 					var element = document.createElement("ins");
 					
           var att = document.createAttribute("class");
@@ -87,7 +88,7 @@
 					element .setAttributeNode(att);
           
           var att = document.createAttribute("style");
-					att.nodeValue = "display:inline-block;width:"+options.ad_width+"px;height:"+ options.ad_height+"px";
+					att.nodeValue = "display:inline-block;width:"+options.ad_width+";height:"+ options.ad_height;
 					element .setAttributeNode(att);
 														  
 					var doc = this.document.body;
