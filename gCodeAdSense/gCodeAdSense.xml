@@ -2,10 +2,10 @@
 <Module>
 	<ModulePrefs 
 		title="gCodeAdSense" 
-		title_url="http://code.google.com/p/gcodeadsense"
-		description="AdSense Gadget for Your Google Code Project"
-		author="Frank Glaser"
-		author_email="glaserfrank@gmail.com">
+		title_url="https://github.com/roman-yagodin/gcodeadsense"
+		description="AdSense gadget for your Google Code / Sites project"
+		author="Roman M. Yagodin"
+		author_email="roman.yagodin@gmail.com">
 	</ModulePrefs>
 	<UserPref name="ad_client"    datatype="string" required="true" />
 	<UserPref name="ad_slot"      datatype="string" required="true" />
