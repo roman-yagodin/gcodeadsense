@@ -9,6 +9,7 @@
 	</ModulePrefs>
 	<UserPref name="ad_client"    datatype="string" required="true" />
 	<UserPref name="ad_slot"      datatype="string" required="true" />
+	<UserPref name="ad_format"      datatype="string" required="auto" />
 	<UserPref name="ad_width"     datatype="string" default_value="auto" />
 	<UserPref name="ad_height"    datatype="string" default_value="auto" />
 	<UserPref name="ad_keywords"  datatype="string" default_value="" />
@@ -28,6 +29,7 @@
 				var options = {
 					ad_client:    prefs.getString("ad_client"),
 					ad_slot:      prefs.getString("ad_slot"),
+					ad_format:    prefs.getString("ad_format"),
 					ad_width:     prefs.getString("ad_width"),
 					ad_height:    prefs.getString("ad_height"),
 					ad_keywords:  prefs.getString("ad_keywords"),
@@ -85,6 +87,10 @@
           
           var att = document.createAttribute("data-ad-slot");
 					att.nodeValue = options.ad_slot;
+					element .setAttributeNode(att);
+          
+		  var att = document.createAttribute("data-ad-format");
+					att.nodeValue = options.ad_format;
 					element .setAttributeNode(att);
           
           var att = document.createAttribute("style");
