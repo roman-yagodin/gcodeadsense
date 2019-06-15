@@ -9,7 +9,8 @@
 	</ModulePrefs>
 	<UserPref name="ad_client"    datatype="string" required="true" />
 	<UserPref name="ad_slot"      datatype="string" required="true" />
-	<UserPref name="ad_format"      datatype="string" required="auto" />
+	<UserPref name="ad_format"    datatype="string" default_value="auto" />
+	<UserPref name="full_width_responsive" datatype="string" default_value="true" />
 	<UserPref name="ad_width"     datatype="string" default_value="auto" />
 	<UserPref name="ad_height"    datatype="string" default_value="auto" />
 	<UserPref name="ad_keywords"  datatype="string" default_value="" />
@@ -30,6 +31,7 @@
 					ad_client:    prefs.getString("ad_client"),
 					ad_slot:      prefs.getString("ad_slot"),
 					ad_format:    prefs.getString("ad_format"),
+					full_width_responsive:    prefs.getString("full_width_responsive"),
 					ad_width:     prefs.getString("ad_width"),
 					ad_height:    prefs.getString("ad_height"),
 					ad_keywords:  prefs.getString("ad_keywords"),
@@ -93,9 +95,18 @@
 					att.nodeValue = options.ad_format;
 					element .setAttributeNode(att);
           
-          var att = document.createAttribute("style");
-					att.nodeValue = "display:inline-block;width:"+options.ad_width+";height:"+ options.ad_height;
+		var att = document.createAttribute("data-full-width-responsive");
+					att.nodeValue = options.full_width_responsive;
 					element .setAttributeNode(att);
+
+		var att = document.createAttribute("style");
+		if (options.ad_format === "auto") {
+        	att.nodeValue = "display:inline-block;width:"+options.ad_width+";height:"+ options.ad_height;
+		}
+		else {
+			att.nodeValue = "display:inline-block;
+		}
+		element .setAttributeNode(att);
 														  
 					var doc = this.document.body;
 					doc.appendChild(element);
